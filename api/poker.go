@@ -1,4 +1,4 @@
-package main
+-package main
 
 import (
     // "fmt"
@@ -25,6 +25,34 @@ type Game struct{
     Players *[]Player
     Starter *Player
     Winner *Player
+}
+
+
+func initDB(filepath string) *sql.DB {
+    db, err := sq.Open("sqlite3", filepath)
+
+    if err != nil {
+      panic(err)
+    }
+
+    if db == nil {
+      panic("db nil")
+    }
+
+    return db
+}
+
+
+func migrate(db *sql.DB) {
+    sql :=
+    ` CREATE TABLE IF NOT EXISTS Players(
+      id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+      name VARCHAR NOT NULL,
+      score INTEGER NOT NULL
+      UNIQUE(name)
+    );
+
+    `
 }
 
 // todo
