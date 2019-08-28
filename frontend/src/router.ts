@@ -1,10 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-
-// Our Pages
-// import PokerIndex from './views/PokerIndex.vue';
-import PokerScore from './views/ShowScore.vue';
+import Scoreboard from './views/Scoreboard.vue';
+import PokerIndex from './views/PokerIndex.vue';
 
 Vue.use(Router);
 
@@ -13,7 +11,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: Home,
     },
@@ -25,15 +23,15 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
-    // {
-    //   path: '/poker',
-    //   name: 'poker index',
-    //   component: PokerIndex,
-    // },
     {
-      path: '/score',
-      name: 'poker score',
-      component: PokerScore,
+      path: '/scoreboard',
+      name: 'scoreboard',
+      component: Scoreboard,
+    },
+    {
+      path: '/poker',
+      name: 'poker index',
+      component: PokerIndex,
     },
   ],
 });
