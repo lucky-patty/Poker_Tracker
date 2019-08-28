@@ -64,6 +64,8 @@ func main(){
     e.Use(middleware.Recover())
 
     // Define the HTTP routes
+
+    // Players
     e.GET("/players",func(c echo.Context) error{
       return c.JSON(200, "GET Players")
     })
@@ -75,6 +77,11 @@ func main(){
     e.PUT("/players/:id", func(c echo.Context) error{
       return c.JSON(200, "UPDATE Player " + c.Param("id"))
     })
+
+    e.POST("players/updateScore/:id")
+
+
+
 
     // Start Server
     e.Logger.Fatal(e.Start(":9000"))
