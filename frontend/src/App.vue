@@ -2,7 +2,7 @@
 <v-app>
   <v-navigation-drawer clipped v-model="drawer" app dark>
     <v-list dense nav>
-      <v-list-item v-for="item in items" :key="item.title" link>
+      <v-list-item v-for="item in items" :key="item.title" @click="" :to="item.route" link>
         <v-list-item-icon>
           <v-icon>{{item.icon}}</v-icon>
         </v-list-item-icon>
@@ -23,11 +23,16 @@
     </v-toolbar-items>
   </v-app-bar>
   <v-content>
-    <router-view />
+    <transition name="router-anim" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutDown">
+      <router-view />
+    </transition>
   </v-content>
 </v-app>
 </template>
 
+<style>
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css";
+</style>
 
 <script>
 export default {
@@ -36,18 +41,22 @@ export default {
     items: [{
         title: 'Home',
         icon: 'home',
+        route: '/',
       },
       {
         title: 'Tracking',
-        icon: 'games'
+        icon: 'games',
+        route: '/track',
       },
       {
         title: 'Scoreboard',
         icon: 'dashboard',
+        route: '/scoreboard',
       },
       {
         title: 'Setting',
         icon: 'settings',
+        route: '/about',
       },
     ]
   }),

@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Scoreboard from './views/Scoreboard.vue';
 import PokerIndex from './views/PokerIndex.vue';
+import PokerTrack from './views/Track.vue';
 
 Vue.use(Router);
 
@@ -32,6 +33,11 @@ export default new Router({
       path: '/',
       name: 'poker index',
       component: PokerIndex,
+    },
+    {
+      path: '/track',
+      name: 'poker track',
+      component: PokerTrack,
     },
   ],
 });

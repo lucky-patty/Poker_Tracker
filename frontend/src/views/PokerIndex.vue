@@ -12,7 +12,7 @@
         </span>
       </v-card-text>
       <v-card-actions>
-        <router-link to="/about">
+        <router-link to="/track">
           <v-btn text>
             Start Playing!
           </v-btn>
