@@ -17,9 +17,6 @@
     <v-toolbar-title class="white--text">Poker Score Tracker</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
-      <v-btn icon flat>
-        <v-icon>apps</v-icon>
-      </v-btn>
       <v-btn icon>
         <v-icon>refresh</v-icon>
       </v-btn>
@@ -37,6 +34,14 @@ export default {
   data: () => ({
     drawer: false,
     items: [{
+        title: 'Home',
+        icon: 'home',
+      },
+      {
+        title: 'Tracking',
+        icon: 'games'
+      },
+      {
         title: 'Scoreboard',
         icon: 'dashboard',
       },
