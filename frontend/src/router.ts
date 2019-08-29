@@ -29,7 +29,7 @@ export default new Router({
       component: Scoreboard,
     },
     {
-      path: '/poker',
+      path: '/',
       name: 'poker index',
       component: PokerIndex,
     },
