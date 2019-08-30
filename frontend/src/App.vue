@@ -62,6 +62,11 @@ export default {
   }),
   props: {
     source: String
+  },
+  computed: {
+    appName() {
+      return this.$store.getters.appTitle
+    }
   }
 };
 </script>
