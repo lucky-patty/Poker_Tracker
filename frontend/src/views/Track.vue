@@ -1,13 +1,15 @@
 <template>
 <v-container>
-  <v-layout text-center>
-    <h1 class="display-3">Start Tracking</h1>
-  </v-layout>
-  <v-layout>
-    <v-text-field color="success" loading></v-text-field>
-  </v-layout>
-  <v-layout>
-    <h2 class="display-3">Fetch Player</h2>
-  </v-layout>
+  <h1 class="display-3">Tracking</h1>
+  <br>
+  <v-divider></v-divider>
+  <br>
+  <h2 class="display-3">Fetch Player</h2>
+  <br>
+  <div class="text-center">
+    <v-progress-circular indeterminate size="100" color="primary">
+    </v-progress-circular>
+  </div>
+
 </v-container>
 </template>
