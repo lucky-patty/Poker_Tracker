@@ -14,7 +14,7 @@
   </v-navigation-drawer>
   <v-app-bar app fixed clipped-left dark>
     <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-    <v-toolbar-title class="white--text">Poker Score Tracker</v-toolbar-title>
+    <v-toolbar-title class="white--text">Score Tracker</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
       <v-btn icon>
